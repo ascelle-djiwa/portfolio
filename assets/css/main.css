@@ -1224,7 +1224,12 @@ input[type="radio"] + label:before {
     border-radius: 0.375em;
     display: block; }
   .image.left, .image.right {
-    max-width: 40%; }
+    max-width: 100%; /* Permet à l'image de prendre toute la largeur */
+    max-height: 40%;
+    float: none;      /* Supprime le fait que le texte coule à côté */
+    display: block;   /* Force l'image à être sur sa propre ligne */
+    margin: 0 0 2em 0; /* Ajoute un espace en dessous */
+}
     .image.left img, .image.right img {
       width: 100%; }
   .image.left {
@@ -2271,6 +2276,3 @@ button,
     margin-top: 0;
     padding-top: 0; }
 
-.image{
-  width: 50px;
-}
